@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="admin_Settings.schedule_foods.showEvent.schedule_Food_items">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white">
+
+        <TextView
+            android:id="@+id/mainPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Kho hình ảnh &amp; video"
+            android:textColor="@color/black"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!--Radio group-->
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/mainPage"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:text="Chương trình 1"
+                android:checked="true"
+                android:textSize="40sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:text="Chương trình 2"
+                android:textSize="40sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chương trình 3"
+                android:textSize="40sp" />
+        </RadioGroup>
+
+        <!-- Date Time -->
+        <!--list of images and videos-->
+
+        <LinearLayout
+            android:id="@+id/dateTimegroup"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:layout_below="@+id/radioGroup"
+            android:layout_marginTop="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="Từ ngày:"
+                android:textColor="@color/Black"
+                android:textSize="60sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/startTimeTxt_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="01-01-1111"
+                android:textColor="@color/Black"
+                android:textSize="60sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="đến ngày"
+                android:textColor="@color/Black"
+                android:textSize="60sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/endTimeTxt_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="02-02-2222"
+                android:textColor="@color/Black"
+                android:textSize="60sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rvImage_and_Video"
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:layout_below="@id/dateTimegroup">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sliderRCV"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/menuRCV"
+                android:layout_below="@id/sliderRCV"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/btnChosse"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/rvImage_and_Video"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/uploadPicture"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="180dp"
+                android:background="@drawable/round_coner"
+                android:backgroundTint="@color/Black"
+                android:padding="20dp"
+                android:text="Chỉnh sửa"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="normal" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonSaveSchedule"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="180dp"
+                android:background="@drawable/round_coner"
+                android:backgroundTint="@color/black"
+                android:padding="20dp"
+                android:text="Thực thi"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="normal" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonSkip"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_coner"
+                android:backgroundTint="@color/Red"
+                android:padding="20dp"
+                android:text="Bỏ qua"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

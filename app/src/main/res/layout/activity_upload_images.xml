@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    tools:context="admin_Settings.schedule_foods.galleryGet.upload_Images"
+    android:id="@+id/main">
+
+    <TextView
+        android:id="@+id/mainPage"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm hình ảnh &amp; video"
+        android:gravity="center"
+        android:textSize="70sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/spinnerGroup"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/mainPage"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/typePage"
+                android:layout_width="500dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="30dp"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/round_coner"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Chọn trang hiển thị"
+                    android:textSize="40sp"
+                    android:textColor="@color/black"
+                    android:focusable="false"
+                    tools:ignore="Choose type of Event" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/pickDatetime"
+                android:layout_width="500dp"
+                android:layout_height="140dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/round_coner"
+                android:text="Chọn thời gian"
+
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/imagesGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        app:layout_constraintTop_toBottomOf="@id/spinnerGroup"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewImages"
+            android:layout_width="match_parent"
+            android:layout_height="650dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dateTimegroup"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnGroup"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:text="Từ ngày:"
+            android:textColor="@color/Black"
+            android:textSize="60sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/startTimeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:text="01-01-1111"
+            android:textColor="@color/Black"
+            android:textSize="60sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:text="đến ngày"
+            android:textColor="@color/Black"
+            android:textSize="60sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/endTimeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="02-02-2222"
+            android:textColor="@color/Black"
+            android:textSize="60sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnGroup"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/openGallary"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/round_coner"
+            android:backgroundTint="@color/Black"
+            android:text="Chọn hình"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="normal" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveType"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:background="@drawable/round_coner"
+            android:backgroundTint="@color/Black"
+            android:text="Lưu danh sách hình ảnh"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="normal" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveEvent"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:background="@drawable/round_coner"
+            android:backgroundTint="@color/Black"
+            android:text="Lưu chương trình"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="normal"
+            android:layout_marginStart="30dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancelBtnPicking"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/round_coner"
+            android:backgroundTint="@color/Red"
+            android:text="Hủy bỏ"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:backgroundTint="#00ffffff"
+    tools:context="admin_Settings.schedule_foods.galleryGet.upload_Images">
+
+
+   <LinearLayout
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:background="@drawable/round_coner"
+       android:backgroundTint="@color/white"
+       android:padding="16dp"
+       >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:id="@+id/below"
+           app:layout_constraintTop_toTopOf="parent"
+           android:gravity="center">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Bạn hãy nhập ngày bắt đầu tại đây:"
+               android:textColor="@color/black"
+               android:textSize="40sp"
+               android:layout_marginEnd="30dp"/>
+
+           <androidx.appcompat.widget.AppCompatEditText
+               android:id="@+id/edit_date_start"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:hint="dd-mm-yyyy"
+               android:inputType="date"
+               android:textSize="40sp"/>
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:id="@+id/below2"
+           android:layout_marginTop="20dp"
+           app:layout_constraintTop_toBottomOf="@id/below"
+           android:gravity="center">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Bạn hãy nhập ngày kết thúc tại đây:"
+               android:textColor="@color/black"
+               android:textSize="40sp"
+               android:layout_marginEnd="30dp"/>
+
+           <androidx.appcompat.widget.AppCompatEditText
+               android:id="@+id/edit_date_end"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:hint="dd-mm-yyyy"
+               android:inputType="date"
+               android:textSize="40sp"/>
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/below2"
+           android:layout_marginTop="20dp"
+           app:layout_constraintTop_toBottomOf="@id/below2"
+           android:gravity="center">
+
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/date_btn_Acepted"
+               android:layout_width="400dp"
+               android:layout_height="100dp"
+               android:textSize="40sp"
+               android:textColor="@color/White"
+               android:text="Ok"
+               android:backgroundTint="@color/black"
+               android:layout_marginEnd="30dp"
+               android:background="@drawable/round_coner"/>
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/date_btn_Canceled"
+               android:layout_width="400dp"
+               android:layout_height="100dp"
+               android:textSize="40sp"
+               android:textColor="@color/white"
+               android:text="Cancel"
+               android:textAllCaps="false"
+               android:backgroundTint="@color/Red"
+               android:background="@drawable/round_coner"/>
+       </LinearLayout>
+   </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
